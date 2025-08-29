@@ -3,14 +3,14 @@ using namespace std;
 
 int n;
 
-int count(string str[], int m){
+int ans(string str[], int m){
     vector<int> v;
 
     for (int i = 0; i < n; i++) {
         set<char> s;
         string sub;
         vector<int> subv;
-        for (int j = 0; i < m; j++) {
+        for (int j = 0; j < m; j++) {
             sub += str[j][i];
             s.insert(str[j][i]);
         }
@@ -27,12 +27,15 @@ string spin(string s, int c) {
     if (c == 0) return s;
 
     else if (c > 0) {
+        c %= n;
         string front = s.substr(n - c, c);
         string back = s.substr(0, n - c);
         return front + back;
     }
 
     else {
+        c = -1 * c;
+        c %= n;
         string front = s.substr(c, n - c);
         string back = s.substr(0, c);
         return front + back;
@@ -46,6 +49,8 @@ int main() {
     int m, k;
     cin >> m >> n >> k;
     string s[m];
+    int tot = 0;
+
     for (int i = 0; i < m; i++) {
         cin >> s[i];
     }
@@ -60,8 +65,8 @@ int main() {
         for (int j = 0; j < m; j++) {
             s[j] = spin(s[j], command[i][j]);
         }
+        tot += ans(s, m);
     }
 
-    int tot = count(s, m);
-    
+    cout << tot;
 }
