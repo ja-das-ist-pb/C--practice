@@ -58,7 +58,7 @@ int main() {
     
     for (int i = 0; i < k; i++) {
         for (int j = 0; j < m; j++) {
-            s[j] = spin(s[j], command[i][k]);
+            s[j] = spin(s[j], command[i][j]);
         }
     }
 
