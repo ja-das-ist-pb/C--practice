@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+int x(int a[4]) {
+    return a[0];
+}
 int main() {
-    string a, b;
-    cin >> a >> b;
-    cout << a + b;
+    int a[4] = {0, 1, 3, 3};
+    cout << x(a[4]);
 }
