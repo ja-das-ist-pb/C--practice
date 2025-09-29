@@ -8,6 +8,8 @@ int dp(vector<vector<int>> &a) {
     trans[0][0] = a[0][0];
     for(int i = 1; i < n; i++)
         if (a[i][0] + trans[i-1][0] < q)
+            trans[i][];
+        else if (a[i][0] + trans[i-1][0] < q)
             trans[i][0] = a[i][0] + trans[i-1][0];
         else 
             trans[i][0] = q;
