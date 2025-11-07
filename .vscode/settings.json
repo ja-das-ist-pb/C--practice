@@ -6,7 +6,8 @@
         "string_view": "cpp",
         "ranges": "cpp",
         "span": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "iostream": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled",
     "C_Cpp.intelliSenseEngine": "default"
